@@ -104,13 +104,13 @@ var Terminal = (function () {
 			terminalBeep.load()
 			terminalBeep.play()
 		}
-
+		
 		this.print = function (message) {
-			var newLine = document.createElement('div')
-			newLine.textContent = message
-			this._output.appendChild(newLine)
+            var newLine = document.createElement('div')
+			newLine.textContent = message;
+            this._output.appendChild(newLine);
 		}
-
+		
 		this.input = function (message, callback) {
 			promptInput(this, message, PROMPT_INPUT, callback)
 		}

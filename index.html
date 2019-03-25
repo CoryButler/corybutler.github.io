@@ -3,6 +3,7 @@
 <title></title>
 <meta charset="UTF-8">
 <script src="terminal.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 <style>
 body
 {
@@ -51,13 +52,12 @@ height="800">
 </div>
 </div>
 <img src="Book_02.png" />
-<div id="term" style="height: 200px; width: 300px"></div>
+<div id="term" style="height: 200px; width: 100%; overflow-y: scroll; text-align: left;"></div>
 <script>var t = new Terminal();
         document.getElementById("term").appendChild(t.html);
-        t.print("hello");
-        var input = "";
-        while(input !== "quit")
-        t.input("Whats the pw?", function() {t.print("oh, okay");});
+        //t.print("OVERMONITORING ADDRESS MATRIX");
+		getInput("Tell me your name.")
+        function getInput(message){t.input(message, function(input) { t.print("NAME: " + input); });}
         </script>
 </body>
 </html>
