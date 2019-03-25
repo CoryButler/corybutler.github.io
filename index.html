@@ -1,6 +1,8 @@
 <html>
 <head>
 <title></title>
+<meta charset="UTF-8">
+<script src="terminal.js"></script>
 <style>
 body
 {
@@ -49,5 +51,13 @@ height="800">
 </div>
 </div>
 <img src="Book_02.png" />
+<div id="term" style="height: 200px; width: 300px"></div>
+<script>var t = new Terminal();
+        document.getElementById("term").appendChild(t.html);
+        t.print("hello");
+        var input = "";
+        while(input !== "quit")
+        t.input("Whats the pw?", function() {t.print("oh, okay");});
+        </script>
 </body>
 </html>
