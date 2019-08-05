@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Codeine</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="js/translator.js"></script>
+    </head>
+    <body >
+        <ul>
+            <li>0 add         - 0 1 2  -> 3</li>
+            <li>1 subtract    - 1 10 4 -> 6</li>
+            <li>2 multiply    - 2 2 3  -> 6</li>
+            <li>3 divide      - 3 12 3 -> 4</li>
+            <li>4 modulo      - 4 4 5  -> 1</li>
+            <li>5 define      - 5 a 6  -> 6</li>
+            <li>6 assign      - 6 a 12 -> 12</li>
+            <li>7 square root - 7 16   -> 4</li>
+            <li>8 log         - 8 a    -> 12</li>
+        </ul>
+        <div style="margin: 10px; float: left">
+            <p>Code:</p>
+            <textarea id="code" rows="20" cols="10" autofocus></textarea>
+        </div>
+        <button style="margin: 10px; float: left; vertical-align: middle" onclick="translator.translate()">>></button>
+        <div style="margin: 10px; float: left">
+            <p>Log:</p>
+            <textarea id="log" rows="20" cols="40" readonly></textarea>
+        </div>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
