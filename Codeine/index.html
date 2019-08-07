@@ -6,26 +6,39 @@
         <link rel="stylesheet" href="css/style.css" />
         <script type="text/javascript" src="js/translator.js"></script>
     </head>
-    <body >
-        <ul style="font-family: Consolas">
-            <li>0 add         - 0 1 2  -> 3</li>
-            <li>1 subtract    - 1 10 4 -> 6</li>
-            <li>2 multiply    - 2 2 3  -> 6</li>
-            <li>3 divide      - 3 12 3 -> 4</li>
-            <li>4 modulo      - 4 4 5  -> 1</li>
-            <li>5 define      - 5 a 6  -> 6</li>
-            <li>6 assign      - 6 a 12 -> 12</li>
-            <li>7 square root - 7 16   -> 4</li>
-            <li>8 log         - 8 a    -> 12</li>
+    <body style="font-family: Consolas">
+        <p>Documentation:</p>
+        <ul>
+            <li>@ define ....... @ a 6; ... 6</li>
+            <li>= assign ....... = a 12; .. 12</li>
+            <li>+ add .......... + 1 2; ... 3</li>
+            <li>- subtract ..... - 10 4; .. 6</li>
+            <li>* multiply ..... * 2 3; ... 6</li>
+            <li>/ divide ....... / 12 3; .. 4</li>
+            <li>% modulo ....... % 4 5; ... 1</li>
+            <li>_ square root .. _ 16; .... 4</li>
+            <li>< log .......... < a; ..... 12</li>
+            <li>&gt; new function . #0 is arg 0, #1 is arg 1, no return function, use @ return 0</li>
+                <ul>
+                    <li>@ return 0;</li>
+                    <li>&gt; f {</li>
+                    <li>@ b #0;</li>
+                    <li>+ b #1;</li>
+                    <li>= return b;</li>
+                    <li>};</li>
+                    <li>f 7 9;</li>
+                    <li>< return; //logs 16</li>
+                </ul>
         </ul>
+        <p>IDE:</p>
         <div style="margin: 10px; float: left">
             <p>Code:</p>
-            <textarea id="code" rows="20" cols="10" autofocus></textarea>
+            <textarea id="code" rows="20" cols="20" autofocus></textarea>
         </div>
-        <button style="margin: 10px; float: left; vertical-align: middle" onclick="translator.translate()">>></button>
+        <button style="margin: 10px; float: left; vertical-align: middle" onclick="translator.translate()">RUN CODE</button>
         <div style="margin: 10px; float: left">
             <p>Log:</p>
-            <textarea id="log" rows="20" cols="40" readonly></textarea>
+            <textarea id="log" rows="20" cols="20" readonly></textarea>
         </div>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
