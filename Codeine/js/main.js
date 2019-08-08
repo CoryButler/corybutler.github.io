@@ -7,10 +7,12 @@ const functions = {
     "/": (a, b) => { return divide(a, b); },
     "%": (a, b) => { return modulo(a, b); },
     "@": (a, b) => { return define(a, b); },
+    "$": (a, b) => { return deallocate(a); },
     "=": (a, b) => { return assign(a, b); },
     "_": (a, b) => { return squareRoot(a); },
     "<": (a, b) => { return log(a); },
-    ">": (a, b) => { return customFunction(a, b)}
+    ">": (a, b) => { return customFunction(a, b)},
+    "~": (a, b) => { return comment(a)}
 }
 
 let functionOperations = {}
@@ -20,6 +22,10 @@ function add (a, b) {
     let val_b = !isNaN(parseFloat(b)) ? b : getValue(b);
     let r = val_a + val_b;
     return assign(a, r);
+}
+
+function comment (a) {
+    return a;
 }
 
 function subtract (a, b) {
@@ -58,6 +64,20 @@ function define (a, b) {
     return variables[variables.length - 1].value;
 }
 
+function deallocate (a) {
+    if (getValue(a) === undefined) 
+        return "ERROR: '" + a + "' is not a variable.";
+    
+    let toRemove;
+    let length = variables.length;
+    for (let i = 0; i < length; i++) {
+        if (variables[i].key === a) toRemove = i;
+    }
+    variables.splice(toRemove, 1);
+
+    return "Deallocated: " + a;
+}
+
 function assign (a, b) {
     let val_b = !isNaN(parseFloat(b)) ? b : getValue(b);
     variables.forEach(v => {
@@ -87,8 +107,12 @@ function getValue (a) {
     return value;
 }
 
+function checkFunctionNames (a) {
+    return functions[a];
+}
+
 function customFunction (a, b) {
-    if (getValue(a) !== undefined) return "Function name must be unique."
+    if (checkFunctionNames(a) !== undefined) return "Function name must be unique.";
     
     let operations = b;
     operations = operations.split("\n").join("").split("~").join(" ").split(",");
@@ -110,36 +134,3 @@ String.prototype.replaceAll = function(search, replacement) {
 };
 
 let translator = new Translator();
-
-/*
-5 a 3
-5 b 4
-2 a a
-2 b b
-5 c a
-0 c b
-7 c
-
-= getHyp a b
-{
-* a a
-* b b
-= c a
-+ c b
-_ c
-}
-
-< getHyp 3 4
-
-int a 3;
-int b 4;
-int c sqrt sq a sq b;
-
-def a
-set a 3
-def b
-set a 4
-def c
-set 
-
-*/
