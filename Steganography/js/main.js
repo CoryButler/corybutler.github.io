@@ -50,10 +50,10 @@ function inject () {
     for (var i = 0; i < messageBits.length; i++) {
         if (j % 4 === 0) { j++; }
             if (messageBits[i] === 1) {
-                imgData.data[j - 1] = (imgData.data[j - 1] | 1) >>> 0;
+                imgData.data[j - 1] |= 1;
             }
             else {
-                imgData.data[j - 1] = (imgData.data[j - 1] & (~1 >>> 0)) >>> 0;
+                imgData.data[j - 1] &= ~1;
             }
         j++;
     }
@@ -66,9 +66,9 @@ function extract () {
 
     var binaryMessage = "";    
     for (var i = 0; i < imgData.data.length; i += 4) {
-        binaryMessage += (imgData.data[i + 0] & 1) >>> 0;
-        binaryMessage += (imgData.data[i + 1] & 1) >>> 0;
-        binaryMessage += (imgData.data[i + 2] & 1) >>> 0;
+        binaryMessage += imgData.data[i + 0] & 1;
+        binaryMessage += imgData.data[i + 1] & 1;
+        binaryMessage += imgData.data[i + 2] & 1;
     }
 
     var arr = [];
