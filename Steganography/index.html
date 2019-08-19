@@ -1,0 +1,31 @@
+<!--
+    Author: Cory Butler
+
+    Copyright © 2018 by American Technical Publishers, Inc.
+    All Rights Reserved
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+        <title>Bitwise</title>
+    </head>
+    <body style="font-family: Consolas">
+        <canvas id="canvas"></canvas>
+        <script src="js/main.js"></script>
+        <p>This image contains a steganographic message. Click "Extract" to view it.<br><br>To inject your own message, enter it into the box below and click "Inject".<br>You can then save the image by right-clicking it.<br><br>The "Invert" is just for fun.</p>
+        <div>
+            <button onclick="extract();">Extract</button>
+            <button onclick="inject();">Inject</button>
+            <button onclick="invert();">Invert</button>
+            <br>
+            <textarea id="injectionMessage"></textarea>
+        </div>
+        <p id="extractionMessage"></p>
+    </body>
+</html>
