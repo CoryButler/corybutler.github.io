@@ -31,7 +31,7 @@ function invert () {
 }
 
 function inject () {
-    var message = document.getElementById("injectionMessage").value + "<br><br><br>";
+    var message = document.getElementById("injectionMessage").value + "<br><br>---End of Message---<br><br>";
     var messageBytes = [];
     for (var i = 0; i < message.length; i++) {
         messageBytes.push(leadingZeroes(message.charCodeAt(i).toString(2)));
