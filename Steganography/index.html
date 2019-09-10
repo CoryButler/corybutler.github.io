@@ -13,19 +13,28 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8">
-        <title>Bitwise</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>🕵️ Steganography</title>
     </head>
-    <body style="font-family: Consolas">
-        <canvas id="canvas"></canvas>
-        <script src="js/main.js"></script>
-        <p>This image contains a steganographic message. Click "Extract" to view it.<br><br>To inject your own message, enter it into the box below and click "Inject".<br>You can then save the image by right-clicking it.<br><br>The "Invert" is just for fun.</p>
-        <div>
-            <button onclick="extract();">Extract</button>
-            <button onclick="inject();">Inject</button>
-            <button onclick="invert();">Invert</button>
-            <br>
-            <textarea id="injectionMessage"></textarea>
+    <body>
+        <h1>STEGANOGRAPHY</h1>
+        <h3>Read and Write Steganographic Messages</h3>
+        <div class="area">
+            <button onclick="extract();">🕵️ Extract Message</button>
+            <button onclick="inject(this);">🖊️ Inject Message</button>
+            <button onclick="save();">💾 Save Image</button>
+            <button onclick="invert();">🖼️ Invert Image</button><br><br>
+        🔎 <input type="file" id="file-input" accept=".jpg,.png" /><br><br>
+            <canvas id="canvas"></canvas>
         </div>
-        <p id="extractionMessage"></p>
+        <div class="area">
+            Message to Inject:<br>
+            <textarea class="textArea" id="injectionMessage" placeholder='Type a message and click "Inject Message" above...' rows="8"></textarea>
+        </div>
+        <div class="area">
+            Extracted Message:<br>
+            <p class="textArea" id="extractionMessage"><span style="color: grey; font-size: 12px;">Click "Extract Message" above...</span></p>
+        </div>
+        <script src="js/main.js"></script>
     </body>
 </html>

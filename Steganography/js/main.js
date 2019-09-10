@@ -5,8 +5,8 @@ var _image = document.createElement("img");
 _image.style.opacity = 0;
 _image.style.position = "absolute";
 _image.style.pointerEvents = "none";
-_image.id = "img"
-_image.src = "img/badReichenhall.png";
+_image.name = "badReichenhall.png"
+_image.src = "img/badReichenhall_steg.png";
 _image.onload = () => {
     _canvas.width = _image.width;
     _canvas.height = _image.height;
@@ -30,19 +30,15 @@ function invert () {
     _context.putImageData(imgData, 0, 0);
 }
 
-function inject () {
+function inject (button) {
+    button.disabled = true;
     var message = document.getElementById("injectionMessage").value + "<br><br>---End of Message---<br><br>";
+
     var messageBytes = [];
-    for (var i = 0; i < message.length; i++) {
-        messageBytes.push(leadingZeroes(message.charCodeAt(i).toString(2)));
-    }
+    message.split("").forEach(m => messageBytes.push(leadingZeroes(m.charCodeAt(0).toString(2))));
 
     var messageBits = [];
-    messageBytes.forEach(b => {
-        for (var i = 0; i < b.length; i++) {
-            messageBits.push(parseInt(b[i], 2));
-        }
-    });
+    messageBytes.forEach(byte => byte.split("").forEach(bit => messageBits.push(parseInt(bit, 2))));
 
     var imgData = _context.getImageData(0, 0, _canvas.width, _canvas.height);
 
@@ -59,6 +55,9 @@ function inject () {
     }
 
     _context.putImageData(imgData, 0, 0);
+    
+    button.innerHTML = "👍 Message Injected";
+    setTimeout(() => { button.disabled = false; button.innerHTML = "🖊️ Inject Message"; }, 1000);
 }
 
 function extract () {
@@ -78,3 +77,31 @@ function extract () {
 
     document.getElementById("extractionMessage").innerHTML = (arr.join(""));
 }
+
+function readSingleFile(e) {
+    var file = e.target.files[0];
+    if (!file) return;
+
+    var reader = new FileReader();
+    reader.onload = e => { 
+        _image.src = e.target.result;
+        _image.name = file.name;
+        _image.type = file.type };
+    reader.readAsDataURL(file);
+}
+
+function displayContents(contents) {
+    document.getElementById("extractionMessage").innerHTML = contents;
+}
+
+function save() {
+    var a  = document.createElement('a');
+    a.href = _canvas.toDataURL(_image.type);
+    var filename = _image.name.substring(_image.name.lastIndexOf("/") + 1, _image.name.lastIndexOf(".")) + "_steg" + _image.name.substring(_image.name.lastIndexOf("."));
+    a.download = filename;
+    document.getElementsByTagName("body")[0].appendChild(a);
+    a.click();
+    document.getElementsByTagName("body")[0].removeChild(a)
+}
+
+document.getElementById('file-input').addEventListener('change', readSingleFile, false);

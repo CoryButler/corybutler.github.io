@@ -1,0 +1,43 @@
+body {
+    font-family: Consolas;
+    background-color: darkgrey;
+}
+
+h1, h3 {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    padding: 4px;
+    text-align: left;
+    font-family: Consolas;
+}
+
+input {
+    font-family: Consolas;
+}
+
+textarea {
+    min-width: calc(100% - 18px);
+}
+
+.area {
+    margin: 8px;
+    padding: 8px;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.textArea {
+    padding: 8px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
