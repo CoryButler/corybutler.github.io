@@ -21,15 +21,15 @@
         <h3>Read and Write Steganographic Messages</h3>
         <div class="area">
             <button onclick="extract();">🕵️ Extract Message</button>
-            <button onclick="inject(this);">🖊️ Inject Message</button>
+            <button id="inject" onclick="inject();">🖊️ Inject Message</button>
             <button onclick="save();">💾 Save Image</button>
             <button onclick="invert();">🖼️ Invert Image</button><br><br>
         🔎 <input type="file" id="file-input" accept=".jpg,.png" /><br><br>
             <canvas id="canvas"></canvas>
         </div>
         <div class="area">
-            Message to Inject:<br>
-            <textarea class="textArea" id="injectionMessage" placeholder='Type a message and click "Inject Message" above...' rows="8"></textarea>
+            <p id="label_injectionMessage">Message to Inject: (/)</p>
+            <textarea class="textArea" id="injectionMessage" oninput="undateLabelInjectionMessage()" placeholder='Type a message and click "Inject Message" above...' rows="8"></textarea>
         </div>
         <div class="area">
             Extracted Message:<br>

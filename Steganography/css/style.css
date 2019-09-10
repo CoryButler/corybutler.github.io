@@ -24,6 +24,7 @@ input {
 }
 
 textarea {
+    max-width: calc(100% - 18px);
     min-width: calc(100% - 18px);
 }
 
