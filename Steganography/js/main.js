@@ -78,7 +78,7 @@ function extract () {
 function save() {
     var filename = _image.name.substring(0, _image.name.lastIndexOf(".")) + "_steg" + _image.name.substring(_image.name.lastIndexOf("."));
     var a  = document.createElement("a");
-    a.href = _canvas.toDataURL(_image.type);
+    a.href = _canvas.toDataURL(_image.type, 1.0);
     a.download = filename;
     _body.appendChild(a);
     a.click();
@@ -93,7 +93,7 @@ function readFile(e) {
     reader.onload = e => { 
         _image.src = e.target.result;
         _image.name = file.name;
-        _image.type = file.type
+        _image.type = file.type;
     };
     reader.readAsDataURL(file);
 }
