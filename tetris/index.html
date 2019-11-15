@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="font-family: Consolas;" onload="form_theme.reset()">
+    <div style="margin: auto; display: flex;">
+        <div style="padding-right: 32px;">
+            <canvas id="field"></canvas>
+        </div>
+        <div style="padding: 16px; border-radius: 16px; border: 4px ridge darkgrey;">
+            <p id="level">Level: 0</p>
+            <p id="lines">Lines: 0</p>
+            <p id="score">Score: 0</p>
+            <p>Next:</p>
+            <canvas id="next"></canvas>
+            <p>Style:</p>
+            <form name="form_theme">
+                <input type="radio" name="theme" oninput="document.dispatchEvent(new CustomEvent('themeChange', { detail: 'default' }))" checked="true">Default
+                <input type="radio" name="theme" oninput="document.dispatchEvent(new CustomEvent('themeChange', { detail: 'console' }))" >Console
+                <input type="radio" name="theme" oninput="document.dispatchEvent(new CustomEvent('themeChange', { detail: 'mario' }))" >Mario
+            </form>
+            <p>Controls:<br>[🡄] move left<br>[🡆] move right<br>[🡅] rotate ⭯<br>[🡇] rotate ⭮<br>[enter] move down</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="tetris.js"></script>
+</body>
+</html>
