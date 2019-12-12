@@ -1,0 +1,54 @@
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+   margin: 0;
+   position: absolute;
+   left: 50%;
+   top: calc(50% + 64px);
+   transform: translate(-50%, -50%);
+}
+
+#hud {
+   position: absolute;
+   padding: 8px;
+   background-color: white;
+   border: 1px solid grey;
+   border-radius: 4px;
+   z-index: 100;
+}
+
+#menu {
+   display: block;
+   margin: 0;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border: 1px solid grey;
+   border-radius: 8px;
+   padding: 8px;
+   background-color: white;
+   min-width: 584px;
+}
+
+label {
+   font-size: 0.8em;
+}
+
+#virtualController {
+   margin: 0;
+   position: absolute;
+   left: 50%;
+   top: 100%;
+   transform: translate(-50%, -100%);
+}
+
+#virtualController div {
+   display: flex;
+}
+
+#virtualController div button {
+   display: flex;
+}
