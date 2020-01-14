@@ -59,7 +59,7 @@ label {
    height: 100%;
 }
 
-@media only screen and (min-width: 812px){
+/* @media only screen and (min-width: 812px){
    #menu {
       width: auto;
    }
@@ -67,4 +67,4 @@ label {
    #virtualController {
       display: none;
    }
-}
+} */
