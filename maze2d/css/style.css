@@ -31,6 +31,7 @@ canvas {
    padding: 8px;
    background-color: white;
    min-width: 590px;
+   width: 95%;
 }
 
 label {
@@ -59,6 +60,10 @@ label {
 }
 
 @media only screen and (min-width: 812px){
+   #menu {
+      width: auto;
+   }
+
    #virtualController {
       display: none;
    }
