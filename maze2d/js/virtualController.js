@@ -8,7 +8,7 @@ export default function VirtualController (player1) {
     const down = document.createElement("button");
     const back = document.createElement("button");
 
-    left.innerHTML = "&LeftArrow;";
+    left.innerHTML = "L";
     right.innerHTML = "&RightArrow;";
     up.innerHTML = "&UpArrow;";
     down.innerHTML = "&DownArrow;";
