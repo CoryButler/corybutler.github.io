@@ -26,7 +26,7 @@ canvas {
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
-   border: 1px solid green;
+   border: 1px solid grey;
    border-radius: 8px;
    padding: 8px;
    background-color: white;
@@ -61,6 +61,7 @@ label {
    border: 1px solid grey;
    border-radius: 0px;
    font-weight: bold;
+   font-size: 40px;
 }
 
 
