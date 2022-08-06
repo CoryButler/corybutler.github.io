@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.71f717eb.css",
+    "main.js": "./static/js/main.afc3ff1b.js",
+    "static/media/taufe.JPG": "./static/media/taufe.9b9d50d557cc6c5127ff.JPG",
+    "static/media/reichenhallerStadtfest.JPG": "./static/media/reichenhallerStadtfest.f1e3f3fc5fa186871231.JPG",
+    "static/media/jesolo.JPG": "./static/media/jesolo.b84e7f0187b95e95a926.JPG",
+    "static/media/kugelmühle.JPG": "./static/media/kugelmühle.d6fcfef08e67edd28875.JPG",
+    "static/media/hochschwarzeck.JPG": "./static/media/hochschwarzeck.e9cc085c8a01ee9f8975.JPG",
+    "static/media/thumsee.JPG": "./static/media/thumsee.9fbc85645b8d96ec684a.JPG",
+    "static/media/salzburgerWasserspiele.JPG": "./static/media/salzburgerWasserspiele.71f84b084c748841e452.JPG",
+    "static/media/venice.JPG": "./static/media/venice.3069485cf6e1889b24a8.JPG",
+    "static/media/salzburg.JPG": "./static/media/salzburg.dc7eb4fdcb88a592d16e.JPG",
+    "static/media/fuchsbau.JPG": "./static/media/fuchsbau.bf4f3dffe898b8dbabd0.JPG",
+    "static/media/abschiedsparty.JPG": "./static/media/abschiedsparty.9308f820428860927b31.JPG",
+    "index.html": "./index.html",
+    "main.71f717eb.css.map": "./static/css/main.71f717eb.css.map",
+    "main.afc3ff1b.js.map": "./static/js/main.afc3ff1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71f717eb.css",
+    "static/js/main.afc3ff1b.js"
+  ]
+}
