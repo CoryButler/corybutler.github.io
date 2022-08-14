@@ -1,0 +1,19 @@
+~ Change a decimal to a percent
+
+~ decimal value
+@ dec 0.88
+
+~ percent value
+@ r_perc 0
+
+~ decimal to percent function
+> toPerc {
+= r_perc #
+* r_perc 100
+}
+
+~ run function
+toPerc dec
+
+~ log the results
+< r_perc

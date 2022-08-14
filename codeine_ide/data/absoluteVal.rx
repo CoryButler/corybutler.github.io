@@ -1,0 +1,19 @@
+~ Calculate the absolute value
+
+~ input
+@ pos 77
+@ neg 33
+- pos 33
+- neg 77
+
+~ absolute value method
+> abs {
+@ n #
+* n n
+_ n
+< n
+}
+
+~ run the method
+abs pos
+abs neg

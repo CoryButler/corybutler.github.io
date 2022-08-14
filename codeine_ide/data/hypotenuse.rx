@@ -1,0 +1,19 @@
+~ Find the hypotenuse
+
+~ sides
+@ adjacent 4
+@ opposite 3
+@ a_squared adjacent
+@ o_squared opposite
+^ a_squared 2
+^ o_squared 2
+
+~ hypotenuse
+@ h_squared
+= h_squared a_squared
++ h_squared o_squared
+@ hypotenuse h_squared
+_ hypotenuse
+
+~ log the results
+< hypotenuse
