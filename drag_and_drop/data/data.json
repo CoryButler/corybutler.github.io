@@ -1,0 +1,42 @@
+{
+    "title": "Lighting Effects",
+    "questions": [
+        {
+            "label": "Cast Shadow",
+            "target": { "x": 716, "y": 382 },
+            "stickingPoint": { "x": 794, "y": 382 }
+        },
+        {
+            "label": "Core Shadow",
+            "target": { "x": 580, "y": 224 },
+            "stickingPoint": { "x": 660, "y": 224 }
+        },
+        {
+            "label": "Highlight",
+            "target": { "x": 450, "y": 120 },
+            "stickingPoint": { "x": 496, "y": 120 }
+        },
+        {
+            "label": "Illuminated Surface",
+            "on_drop_label": "Illuminated\nSurface",
+            "target": { "x": 172, "y": 458 },
+            "stickingPoint": { "x": 114, "y": 458 }
+        },
+        {
+            "label": "Light Source",
+            "target": { "x": 150, "y": 100 },
+            "stickingPoint": { "x": 150, "y": 100 }
+        },
+        {
+            "label": "Reflected Light",
+            "on_drop_label": "Reflected Light in\nShadowed Areas",
+            "target": { "x": 324, "y": 672 },
+            "stickingPoint": { "x": 216, "y": 654 }
+        },
+        {
+            "label": "Shaded Surface",
+            "target": { "x": 610, "y": 296 },
+            "stickingPoint": { "x": 708, "y": 296 }
+        }
+    ]
+}
