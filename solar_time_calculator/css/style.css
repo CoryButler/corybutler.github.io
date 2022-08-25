@@ -1,0 +1,129 @@
+body {
+    background-color: #4d8dce;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-size: 16px;
+    padding: 4px;
+}
+
+.banner {
+    background-color: #0059b3;
+    border-top: 2px solid #9bc2eb;
+    border-bottom: 2px solid #9bc2eb;
+    margin: 50px 0 16px 0;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.banner img {
+    height: 128px;
+    margin-top: -16px;
+    margin-left: -340px;
+    margin-bottom: -16px;
+}
+
+.banner h1 {
+    margin-bottom: -16px;
+    padding-left: 32px;
+    line-height: 58px;
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.card {
+    background-color: #DDDDDD;
+    border: 1px solid grey;
+    color: #555555;
+    border-radius: 16px;
+    margin: 16px 32px;
+    padding: 0 16px;
+    display: flex;
+}
+
+.card .fields {
+    margin: 4px 16px;
+    display: flex;
+    align-items: baseline;
+}
+
+.card select {
+    font-size: 16px;
+    padding: 4px;
+}
+
+.resultCard {
+    background-color: #ffc000;
+    border: 1px solid #ff7200;
+    color: white;
+    border-radius: 16px;
+    margin: 16px -16px;
+    padding: 0 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.resultCard .header {
+    background-color: #ffe14c;
+    border: 1px solid #ff7200;
+    color: black;
+    border-radius: 12px;
+    margin: 4px -12px;
+    font-size: 24px;
+}
+
+.resultCard p {
+    text-shadow: 1px 1px 0px darkred;
+    font-size: 38px;
+}
+
+@media (max-width: 950px) {
+    button {
+        font-size: 12px;
+    }
+    .banner {
+        margin: 10px 0;
+        padding: 0 8px;
+        display: flex;
+        color: white;
+        border-top: 1px solid #9bc2eb;
+        border-bottom: 1px solid #9bc2eb;
+        justify-content: start;
+    }
+    .banner img {
+        height: 64px;
+        margin-top: -4px;
+        margin-left: 0px;
+        margin-bottom: -4px;
+    }
+    .banner h1 {
+        font-size: 18px;
+        margin-bottom: -4px;
+        margin-top: 20px;
+        padding-left: 8px;
+        line-height: 16px;
+    }
+    .container {
+        display: inline;
+    }
+    .card {
+        margin: 4px 8px;
+        font-size: 12px;
+    }
+    .card select {
+        font-size: 12px;
+    }
+    .resultCard {
+        margin: 4px 8px;
+    }
+    .resultCard p {
+        font-size: 24px;
+    }
+}

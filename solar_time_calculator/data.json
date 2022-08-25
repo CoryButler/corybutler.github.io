@@ -1,0 +1,104 @@
+{
+    "cards": [
+        {
+            "name": "Date",
+            "fields": [
+                {
+                    "id": "month",
+                    "options": [
+                        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+                    ],
+                    "unit": "&nbsp;"
+                },
+                {
+                    "id": "day",
+                    "optionDay": {},
+                    "unit": "&nbsp;"
+                },
+                {
+                    "id": "year",
+                    "optionYear": {}
+                }
+            ]
+        },
+        {
+            "name": "Time",
+            "fields": [
+                {
+                    "id": "hour",
+                    "optionRange": {
+                        "a": 1,
+                        "b": 12
+                    },
+                    "unit": "&nbsp;:&nbsp;"
+                },
+                {
+                    "id": "minute",
+                    "optionRange": {
+                        "a": 0,
+                        "b": 59
+                    },
+                    "unit": "&nbsp;"
+                },
+                {
+                    "id": "meridian",
+                    "options": [
+                        "AM", "PM"
+                    ],
+                    "unit": "&nbsp;&nbsp;&nbsp;"
+                },
+                {
+                    "id": "fromTime",
+                    "options": [
+                        "Clock Time", "Solar Time"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Time&nbsp;Zone",
+            "fields": [
+                {
+                    "id": "timeZone",
+                    "options": [
+                        "Eastern", "Central", "Mountain", "Pacific", "Alaska", "Hawaii-Aleutian"
+                    ],
+                    "unit": "&nbsp;"
+                },
+                {
+                    "id": "timeType",
+                    "options": [
+                        "Standard Time", "Daylight Savings Time"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Longitude",
+            "fields": [
+                {
+                    "id": "degree",
+                    "optionRange": {
+                        "a": 64,
+                        "b": 172
+                    },
+                    "unit": "&nbsp;°&nbsp;"
+                },
+                {
+                    "id": "longitudeMinute",
+                    "optionRange": {
+                        "a": 0,
+                        "b": 59
+                    },
+                    "unit": "&nbsp;'&nbsp;W&nbsp;&nbsp;"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "useCurrent",
+                    "innerHTML": "Use Current"
+                }
+            ]
+        }
+    ]
+}
