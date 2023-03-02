@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans");
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+
 :root {
     --green-000: #001000;
     --green-100: #202220;
     --green-500: #1a9940;
     --green-900: #9beeb4;
+}
+
+::selection {
+    background: var(--green-500);
+    color: white;
 }
 
 * {
@@ -13,11 +21,61 @@
 
 body {
     background: var(--green-100);
+    font-family: "Merriweather Sans";
 }
 
-#root {
+.body {
+    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.logo-text {
+    color: var(--green-000);
+    font-family: "Rock Salt";
+    font-size: 2em;
+    left: 24px;
+    position: absolute;
+    text-shadow:
+    1px 1px var(--green-900),
+    0 0 4px var(--green-900);
+    top: -6px;
+    transform: rotate(-4deg);
+    z-index: 10;
+}
+
+.nav-bar {
+    background: var(--green-100);
+    box-shadow: 0 4px 8px var(--green-000);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-bar-button {
+    color: var(--green-500);
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 4px 12px;
+}
+
+.nav-bar-button--selected {
+    background: var(--green-500);
+    box-shadow: 0 0 16px var(--green-000);
+    color: var(--green-100);
+    cursor: default;
+}
+
+.nav-bar-button-container {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
 .portfolio-card {
@@ -41,16 +99,6 @@ body {
     max-height: 256px;
 }
 
-.portfolio-card > .image-area > h1 {
-    color: var(--green-100);
-    left: 12px;
-    position: absolute;
-    text-shadow:
-    1px 1px var(--green-900),
-    0 0 4px var(--green-900);
-    top: 2px;
-}
-
 .portfolio-card > .text-area {
     background: var(--green-100);
     padding: 2px 12px;
@@ -60,7 +108,9 @@ body {
 .portfolio-card > .text-area > h1 {
     border-bottom: 1px solid var(--green-500);
     color: var(--green-500);
+    font-size: 2em;
     margin-bottom: 8px;
+    padding: 8px 16px 0 16px;
     text-shadow:
     1px 1px var(--green-000),
     0 0 4px var(--green-000);
@@ -70,6 +120,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 0 16px;
 }
 
 .portfolio-card p {
@@ -77,11 +128,25 @@ body {
 }
 
 .under-construction {
+    border-top: 1px dashed var(--green-900);
     display: flex;
     flex-direction: column;
+    margin-top: 32px;
+    padding-top: 32px;
+    width: 100%;
 }
 
-.under-construction > h1, .under-construction > h3 {
+.under-construction > h1 {
+    color: var(--green-500);
+    margin-bottom: 16px;
+    text-align: center;
+    text-shadow:
+    1px 1px var(--green-000),
+    0 0 4px var(--green-000);
+    width: 100;
+}
+
+.under-construction > h3 {
     color: var(--green-500);
     margin-bottom: 32px;
     text-align: center;
