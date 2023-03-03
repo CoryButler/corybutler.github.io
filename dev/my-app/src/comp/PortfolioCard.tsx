@@ -9,6 +9,7 @@ export default function PortfolioCard(props: any) {
             </div>
             <div className="text-area">
                 <h1>{props.header}</h1>
+                <div className="hr-fade-to-right"></div>
                 <div className="paragraph-container">
                     {paragraphs}
                 </div>

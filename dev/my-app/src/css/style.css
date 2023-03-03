@@ -4,6 +4,7 @@
 :root {
     --green-000: #001000;
     --green-100: #202220;
+    --green-200: #292c29;
     --green-500: #1a9940;
     --green-900: #9beeb4;
 }
@@ -20,7 +21,7 @@
 }
 
 body {
-    background: var(--green-100);
+    background: var(--green-200);
     font-family: "Merriweather Sans";
 }
 
@@ -29,6 +30,18 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 16px;
+}
+
+.hr-fade-to-left {
+    background-image: linear-gradient(-90deg, var(--green-100), var(--green-500) 32px, var(--green-500) 50%, var(--green-100));
+    height: 1px;
+    margin-bottom: 8px;
+}
+
+.hr-fade-to-right {
+    background-image: linear-gradient(90deg, var(--green-100), var(--green-500) 32px, var(--green-500) 50%, var(--green-100));
+    height: 1px;
+    margin-bottom: 8px;
 }
 
 .logo-text {
@@ -47,7 +60,8 @@ body {
 
 .nav-bar {
     background: var(--green-100);
-    box-shadow: 0 4px 8px var(--green-000);
+    border-bottom: 1px solid var(--green-000);
+    box-shadow: 0 2px 8px var(--green-000);
     display: flex;
     justify-content: flex-end;
     padding: 0 40px;
@@ -79,7 +93,8 @@ body {
 }
 
 .portfolio-card {
-    border-radius: 8px;
+    border: 1px solid var(--green-000);
+    border-radius: 32px;
     box-shadow: 0 0 16px var(--green-000);
     display: flex;
     height: fit-content;
@@ -106,10 +121,8 @@ body {
 }
 
 .portfolio-card > .text-area > h1 {
-    border-bottom: 1px solid var(--green-500);
     color: var(--green-500);
     font-size: 2em;
-    margin-bottom: 8px;
     padding: 8px 16px 0 16px;
     text-shadow:
     1px 1px var(--green-000),
@@ -163,6 +176,7 @@ body {
 }
 
 .under-construction a {
+    background: var(--green-100);
     border: 1px solid var(--green-000);
     border-radius: 8px;
     box-shadow: 0 0 8px var(--green-000);
