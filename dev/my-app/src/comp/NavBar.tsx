@@ -5,7 +5,7 @@ import NavBarButton from './NavBarButton';
 export default function NavBar(props: any) {
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     const navBarButtons = ["About", "Dev", "2D", "3D", "Contact"].map(
-        (str, i ) => <NavBarButton key={i} label={str} isSelected={i === selectedIndex} onClick={() => setSelectedIndex(i)} />
+        (str, i ) => <NavBarButton key={i} label={str} isSelected={i === selectedIndex} onClick={() => setSelectedIndex(i)} link={str.toLocaleLowerCase()} />
     );
     return (
         <nav className="nav-bar">
