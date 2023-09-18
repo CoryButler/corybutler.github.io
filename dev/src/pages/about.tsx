@@ -6,7 +6,7 @@ export default function About(props: any) {
     return (
         <div className="flex-column">
             <div className="flex-row">
-                <img className="circle shadow" src={cory_png} />
+                <img className="hero-img circle shadow" src={cory_png} />
                 <div className="text-area">
                     <h1 className="header">A little bit about me...</h1>
                     <div className="paragraph-container">
@@ -17,7 +17,7 @@ export default function About(props: any) {
                 </div>
             </div>
             <div className="hr-fade-to-right"></div>
-            <h1 className="header">A little bit more...</h1>
+            <h2 className="header">A little bit more...</h2>
                 <div className="flex-row">
                 <p className="row-header">Programming Languages</p><p>C#, TypeScript/JavaScript</p>
                 </div>
@@ -37,16 +37,9 @@ export default function About(props: any) {
                 <p className="row-header">Mantra</p><p>Every day, take one step toward your goal.</p>
                 </div>
             <div className="hr-fade-to-right"></div>
-            <div className="under-construction">
-                <h1>This site is under construction.</h1>
-                <h3>Check out some of my projects below in the meantime.</h3>
-                <div>
-                <a href="//www.corybutler.com/codeine_ide/">Codeine IDE</a>
-                <a href="//www.corybutler.com/maze2d/">Maze 2D</a>
-                <a href="//www.corybutler.com/steganography/">Steganography</a>
-                <a href="//www.corybutler.com/tetris/">Tetris</a>
-                </div>
-            </div>
+            <footer className="under-construction">
+                <a href="./contact/">Contact Me</a>
+            </footer>
         </div>
     );
 }
